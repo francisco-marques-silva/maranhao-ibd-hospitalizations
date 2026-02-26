@@ -1,0 +1,42 @@
+# ==============================================================
+#  .gitignore — Internações DII no Maranhão (2015–2025)
+#  Regra geral: dados brutos e outputs gerados são ignorados;
+#  apenas código-fonte e estrutura de diretórios são rastreados.
+# ==============================================================
+
+# ----- Dados (nunca commitar dados de pacientes!) -----
+data/raw/
+data/processed/
+data/
+
+# ----- Outputs gerados automaticamente (ignorados) -----
+# PNG, DOCX e HTML são reproduzíveis via source("R/007_main.R")
+*.png
+*.docx
+*.html
+
+# ----- R temporários -----
+.Rhistory
+.RData
+.Ruserdata
+.Rproj.user/
+.Rproj.user
+crohn_colite_ma.Rproj
+
+# ----- renv (biblioteca local de pacotes) -----
+renv/library/
+renv/staging/
+renv/sandbox/
+
+# ----- Sistema operacional -----
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ----- Formatos de dados brutos do DATASUS -----
+*.dbc
+*.dbf
+
+# ----- Garantir que as pastas de output existam no repositório -----
+!output/figuras/.gitkeep
+!output/tabelas/.gitkeep
